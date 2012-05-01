@@ -1,3 +1,5 @@
 bootstrap-prefix*.sh
 *.done
 install/*
+#*#
+~*

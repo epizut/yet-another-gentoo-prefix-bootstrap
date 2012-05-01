@@ -12,3 +12,5 @@ include helpers.mk
 include system.mk
 include tools.mk
 include scientific.mk
+
+include desktop-xfce4.mk

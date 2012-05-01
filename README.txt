@@ -1,4 +1,19 @@
 ============================================================================
+Yet Another Gentoo Prefix Boostrap
+============================================================================
+
+This project is just a dummy fork of https://github.com/npinto/gentoo-prefix-bootstrap
+with some new feature:
+- Http proxy support
+- Desktop environemnt
+- Per user emerge list
+
+
+
+
+Original Readme:
+
+============================================================================
 Gentoo Prefix Boostrap
 ============================================================================
 

@@ -13,4 +13,5 @@ include system.mk
 include tools.mk
 include scientific.mk
 
-include desktop-xfce4.mk
+include mk-desktop/desktop-xfce4.mk
+include mk-user/user-epimerde.mk

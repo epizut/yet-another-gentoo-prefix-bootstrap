@@ -132,8 +132,10 @@ install/stage2-portage: install/stage2-up-to-pax-utils install/stage2-portage-wo
 	env FEATURES="-collision-protect" ${EMERGE} --oneshot sys-apps/portage
 	# -- Move tmp directory
 	mv -f ${EPREFIX}/tmp ${EPREFIX}/tmp.old
+	# -- Synchronize repo over http (proxy compatible)
+	emerge-webrsync
 	# -- Synchronize repo
-	${EMERGE} --sync
+	#${EMERGE} --sync
 	touch $@
 
 endif

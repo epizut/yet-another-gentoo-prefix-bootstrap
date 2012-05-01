@@ -49,7 +49,9 @@ install/_stage2-file:
 	touch $@
 
 install/_stage2-pkgconfig:
-	${EMERGE} --oneshot -j dev-util/pkgconfig
+        # FEATURES=-strict as been added to avoid a checksum failure
+        # this must be removed as soon as possible
+	FEATURES=-strict ${EMERGE} --oneshot -j dev-util/pkgconfig
 	touch $@
 
 install/_stage2-wget:

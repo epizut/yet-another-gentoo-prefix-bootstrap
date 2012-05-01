@@ -90,6 +90,15 @@ install/_stage1-portage:
 	mkdir -p ${EPREFIX}/etc/portage/package.unmask
 	mkdir -p ${EPREFIX}/etc/portage/package.env
 	mkdir -p ${EPREFIX}/etc/portage/env
+
+	# epimerde: As the --autounmask-write option is writing into the
+	# lexicographically last file, we create those zzz file to handle
+	# those automask queries
+	touch ${EPREFIX}/etc/portage/package.keywords/zzz_auto
+	touch ${EPREFIX}/etc/portage/package.use/zzz_auto
+	touch ${EPREFIX}/etc/portage/package.mask/zzz_auto
+	touch ${EPREFIX}/etc/portage/package.unmask/zzz_auto
+	touch ${EPREFIX}/etc/portage/package.env/zzz_auto
 	touch $@
 
 endif

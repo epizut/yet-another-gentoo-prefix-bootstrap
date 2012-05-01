@@ -8,6 +8,7 @@ install/stage3: install/stage2 \
 	install/_stage3-git \
 	install/_stage3-groff \
 	install/_stage3-system
+	touch $@
 
 install/_stage3-gettext:
 	# -- git: dependencies

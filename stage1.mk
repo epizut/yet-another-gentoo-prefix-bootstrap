@@ -31,7 +31,11 @@ install/_stage1-make:
 	touch $@
 
 install/_stage1-wget:
-	./bootstrap-prefix.sh ${EPREFIX}/tmp wget
+	# epimerde: crappy bad fix
+	# we need to use the local wget because we
+	# need the https support
+	cp /usr/bin/wget ${EPREFIX}/tmp/usr/bin/wget
+	#./bootstrap-prefix.sh ${EPREFIX}/tmp wget
 	touch $@
 
 install/_stage1-sed:

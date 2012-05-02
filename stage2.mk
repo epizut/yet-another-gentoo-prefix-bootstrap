@@ -96,7 +96,9 @@ install/stage2-gcc: install/_stage2-binutils
 	${EMERGE} --oneshot --nodeps sys-kernel/linux-headers
 	${EMERGE} --oneshot -j sys-devel/bison
 	${EMERGE} --oneshot --nodeps "=sys-devel/gcc-4.2*"
-	echo ">=sys-devel/gcc-4.2" > ${EPREFIX}/etc/portage/package.mask/gcc
+	# epimerde: We dont want to fix the gcc version, a newer one will be installer
+        # on the next system upgrade
+        #echo ">=sys-devel/gcc-4.2" > ${EPREFIX}/etc/portage/package.mask/gcc
 	touch $@
 
 install/stage2-up-to-pax-utils: install/stage2-gcc
@@ -132,7 +134,7 @@ install/stage2-portage: install/stage2-up-to-pax-utils install/stage2-portage-wo
 	env FEATURES="-collision-protect" ${EMERGE} --oneshot sys-apps/portage
 	# -- Move tmp directory
 	mv -f ${EPREFIX}/tmp ${EPREFIX}/tmp.old
-	# -- Synchronize repo over http (proxy compatible)
+	# -- epimerde: Synchronize repo over http (proxy compatible)
 	emerge-webrsync
 	# -- Synchronize repo
 	#${EMERGE} --sync

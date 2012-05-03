@@ -1,5 +1,5 @@
 ifndef DESKTOP-XFCE4_MK
-SYSTEM_MK=desktop-xfce4.mk
+DESKTOP-XFCE4_MK=desktop-xfce4.mk
 
 include init.mk
 

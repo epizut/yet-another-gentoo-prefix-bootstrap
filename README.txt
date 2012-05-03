@@ -5,7 +5,7 @@ Yet Another Gentoo Prefix Boostrap
 This project is just a dummy fork of https://github.com/npinto/gentoo-prefix-bootstrap
 With some new features:
 - Http proxy support
-- Desktop environemnt
+- Desktop environment
 - Per user emerge list
 
 

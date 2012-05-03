@@ -8,6 +8,22 @@ With some new features:
 - Desktop environment
 - Per user emerge list
 
+Usage:
+------
+To get some help:
+$ make help
+
+To uninstall everything:
+$ make uninstall
+
+To just install the system:
+$ make system
+
+To install the fluxbox desktop environment:
+$ make desktop-fluxbox
+
+To install the xfce4 desktop environment:
+$ make desktop-xfce4
 
 
 

@@ -8,7 +8,7 @@ desktop-xfce4: system \
 
 
 desktop-xfce4-base:
-	${EMERGE} -uN xfce-base/xfce4-meta --autounmask-write
+	${EMERGE} -uN xfce-base/xfce4-meta --autounmask-write || true
 	${EMERGE} -uN xfce-base/xfce4-meta
 
 
